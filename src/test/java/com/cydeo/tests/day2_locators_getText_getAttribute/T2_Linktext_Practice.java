@@ -27,8 +27,8 @@ public class T2_Linktext_Practice {
 
 
         // 3- Click to A/B Testing from top of the list.
-            //Thread.sleep(2000);
-            //driver.findElement(By.linkText("A/B Testing")).click();
+        //Thread.sleep(2000);
+        //driver.findElement(By.linkText("A/B Testing")).click();
 
         WebElement abTestLink = driver.findElement(By.linkText("A/B Testing"));
         abTestLink.click();
