@@ -30,6 +30,16 @@ public class T4_LibraryLoginPage {
         usernameInput.sendKeys("incorrect@email.com");
 
        // 4. Enter password: “incorrect password”
+
+        WebElement passwordInput = driver.findElement(By.id("inputPassword"));
+
+        passwordInput.sendKeys("incorrect password");
+
+       // 5. Click to Sign in button
+
+       WebElement signInButton = driver.findElement(By.tagName("button"));
+       signInButton.click();
+
        // 5. Verify: visually “Sorry, Wrong Email or Password”
        // displayed
        // PS: Locate username input box using “className” locator
