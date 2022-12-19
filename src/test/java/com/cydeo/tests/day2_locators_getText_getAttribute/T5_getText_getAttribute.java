@@ -38,9 +38,20 @@ public class T5_getText_getAttribute {
 
         //4- Locate “First name” input box
 
+        WebElement firstNameInput = driver.findElement(By.name("firstname"));
+
 
 
         //5- Verify placeholder attribute’s value is as expected:
         //Expected: first name
+
+        String expectedPlaceHolder = "first name";
+        String actualPlaceHolder = firstNameInput.getAttribute("placeholder");
+
+        if (actualPlaceHolder.equals(expectedPlaceHolder)){
+            System.out.println("Place holder text verification PASSED!");
+        }else{
+            System.out.println("Place holder text verification FAILED!!!");
+        }
     }
 }
