@@ -28,6 +28,13 @@ public class BasicNavigations {
         String currentTitle = driver.getTitle();
         System.out.println("currentTitle = " + currentTitle);
 
+        // Get the current URL using Selenium
+
+        String currentURL = driver.getCurrentUrl();
+
+        System.out.println("currentURL = " + currentURL);
+
+
 
         //Stop code execution for 3 seconds
 
@@ -61,9 +68,21 @@ public class BasicNavigations {
 
         driver.navigate().to("https://www.google.com");
 
-        currentTitle = driver.getTitle();K
+        currentTitle = driver.getTitle();
+
+        System.out.println("currentTitle = " + currentTitle);
+
+        // Get the current URL using Selenium
+
+         currentURL = driver.getCurrentUrl();
+
+        System.out.println("currentURL = " + currentURL);
 
 
 
+
+
+        Thread.sleep(2000);
+        driver.quit();
     }
 }
