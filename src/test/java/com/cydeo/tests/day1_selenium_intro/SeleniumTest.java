@@ -9,6 +9,7 @@ public class SeleniumTest {
     public static void main(String[] args) {
 
         //1- Setting up the web driver manager
+        //We create our "Browser Driver"
 
         WebDriverManager.chromedriver().setup();
 
@@ -18,9 +19,9 @@ public class SeleniumTest {
 
         //3- Test if driver is working as expected
 
-        driver.get("https://facebook.com");
+        driver.get("https://www.erdoganteknik.com.tr/");
 
-        driver.quit();
+
 
 
     }
