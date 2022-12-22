@@ -36,7 +36,7 @@ public class FacebookLoginVerification {
         //5. Verify title changed to:
         //Expected: “Log into Facebook”
 
-        driver.findElement(By.id("u_0_v")).click();
+        driver.findElement(By.xpath("//button[@class = 'wt-btn wt-btn--filled wt-mb-xs-0']")).click();
 
         String expectedTitle = "Log into Facebook";
         String actualTitle = driver.getTitle();
