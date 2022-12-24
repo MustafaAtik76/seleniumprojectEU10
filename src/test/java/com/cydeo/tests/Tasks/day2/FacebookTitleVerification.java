@@ -25,7 +25,7 @@ public class FacebookTitleVerification {
         //Expected: “Facebook - Log In or Sign Up”
 
         String expectedTitle ="Facebook - Log In or Sign Up";
-        String actualTitle = driver.getTitle();
+       String actualTitle = driver.getTitle();
 
         System.out.println("actualTitle = " + actualTitle);
 
@@ -35,7 +35,7 @@ public class FacebookTitleVerification {
             System.out.println("Title verification FAILED!!!");
 
         }
-        driver.close();
+        //driver.close();
 
 
 
