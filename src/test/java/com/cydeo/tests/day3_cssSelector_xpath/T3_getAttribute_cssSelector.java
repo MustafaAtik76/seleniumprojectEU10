@@ -1,6 +1,6 @@
 package com.cydeo.tests.day3_cssSelector_xpath;
 
-import com.cydeo.tests.utilities.*;
+import com.cydeo.utilities.*;
 import org.openqa.selenium.*;
 
 public class T3_getAttribute_cssSelector {
@@ -13,6 +13,8 @@ public class T3_getAttribute_cssSelector {
 
         //2- Go to: https://login1.nextbasecrm.com/
         driver.get("https://login1.nextbasecrm.com/");
+
+
 
         //3- Verify “Log in” button text is as expected:
         //Expected: Log In
