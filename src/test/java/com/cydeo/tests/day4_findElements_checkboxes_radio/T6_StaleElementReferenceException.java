@@ -1,6 +1,6 @@
 package com.cydeo.tests.day4_findElements_checkboxes_radio;
 
-import com.cydeo.tests.utilities.*;
+import com.cydeo.utilities.*;
 import org.openqa.selenium.*;
 
 import java.util.concurrent.*;
@@ -33,5 +33,7 @@ public class T6_StaleElementReferenceException {
         //5- Verify it is displayed, again.
         System.out.println("cydeoLink.isDisplayed() = " + cydeoLink.isDisplayed());
 
+        driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+        driver.close();
     }
 }
