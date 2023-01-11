@@ -1,39 +1,38 @@
 package com.cydeo.tests.day7_webtables_utilities_javafaker;
 
+import com.cydeo.utilities.BrowserUtils;
 import com.cydeo.utilities.WebDriverFactory;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
-import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
 public class T1_WindowHandle {
 
-public WebDriver driver;
+    public WebDriver driver;
 
-@BeforeMethod
+    @BeforeMethod
 
-    public void setupMethod(){
+    public void setupMethod() {
 
-    driver = WebDriverFactory.getDriver("chrome");
+        driver = WebDriverFactory.getDriver("chrome");
 
-    driver.manage().window().maximize();
+        driver.manage().window().maximize();
 
-    driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
 
-}
+    }
 
     @Test
 
-    public void window_handling_test (){
+    public void window_handling_test() {
 
-    //2. Go to: https://www.amazon.com
+        //2. Go to: https://www.amazon.com
 
-    driver.get("https://www.amazon.com");
+        driver.get("https://www.amazon.com");
 
         //3. Copy-paste the lines from below into your class
         ((JavascriptExecutor) driver).executeScript("window.open('https://google.com','_blank');");
@@ -43,9 +42,9 @@ public WebDriver driver;
 
         //4. Create a logic to switch to the tab where Etsy.com is open
 
-       // BrowserUtils.switchWindowAndVerify(driver, "etsy", "Etsy");  // From Utilities
+        BrowserUtils.switchWindowAndVerify(driver, "etsy", "Etsy");  // From Utilities
 
-        Set <String> allWindowsHandles = driver.getWindowHandles();
+        /*Set <String> allWindowsHandles = driver.getWindowHandles();
 
         for (String each : allWindowsHandles) {
 
@@ -65,7 +64,8 @@ public WebDriver driver;
         String expectedTitle = "Etsy";
 
         Assert.assertTrue(actualTitle.contains(expectedTitle));
-    }
+    }*/
 
+    }
 }
 
