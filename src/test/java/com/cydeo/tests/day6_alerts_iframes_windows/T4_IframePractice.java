@@ -35,7 +35,7 @@ public class T4_IframePractice {
         //driver.switchTo().frame(0);
 
         //option #3- locate as web element and pass in frame() method
-        driver.switchTo().frame(driver.findElement(By.xpath("//iframe[@id='mce_0_ifr']")));
+        driver.switchTo().frame(driver.findElement(By.xpath("//iframe[@title=\"Rich Text Area\"]")));
 
         //Locate the p tag
         WebElement yourContentGoesHereText = driver.findElement(By.xpath("//p"));
@@ -44,7 +44,7 @@ public class T4_IframePractice {
 
         //Verify "An iFrame containing the TinyMCE WYSIWYG Editor"
         //To be able to verify the header, we must switch back to "main HTML"
-        driver.switchTo().parentFrame();
+        driver.switchTo().defaultContent(); //parentClass()
 
         WebElement headerText = driver.findElement(By.xpath("//h3"));
 
