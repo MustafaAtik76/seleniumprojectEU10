@@ -1,6 +1,6 @@
 package com.cydeo.tests.day8_properties_config_reader;
 
-import com.cydeo.utilities.Driver;
+import com.cydeo.tests.utilities.Driver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
